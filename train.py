@@ -9,7 +9,7 @@ print(f"Using device: {device}")
 dataset = load_dataset("openai/MMMLU")
 
 # Charger le tokenizer pour BERT
-tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B")
 
 # Fonction pour tokenizer les données textuelles
 def tokenize_function(examples):
