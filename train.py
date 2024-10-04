@@ -6,7 +6,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
 # Charger le dataset IMDB
-dataset = load_dataset("imdb")
+dataset = load_dataset("openai/MMMLU")
 
 # Charger le tokenizer pour BERT
 tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
