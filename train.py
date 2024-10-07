@@ -1,9 +1,12 @@
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, Trainer, TrainingArguments
 from datasets import load_dataset
+from huggingface_hub import login
 import torch
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
+
+login(token="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")
 
 # Charger le dataset IMDB
 dataset = load_dataset("openai/MMMLU")
